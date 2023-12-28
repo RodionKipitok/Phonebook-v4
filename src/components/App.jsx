@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
-
 import { customAlphabet } from 'nanoid';
 import { PhonebookForm } from './Phonebook/Form/Form';
 import Filter from './Phonebook/Filter/Filter';
 import Contacts from './Phonebook/Contact/Contacts';
-import { Form } from 'formik';
 
 export default function App(params) {
   const [contacts, setContacts] = useState(showLocalStorageContacts());
@@ -69,9 +67,3 @@ export default function App(params) {
     </>
   );
 }
-
-// componentDidUpdate(prevProps, prevState) {
-//   if (this.state.contacts !== prevProps.contacts) {
-//     localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-//   }
-// }
